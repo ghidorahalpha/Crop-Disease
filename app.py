@@ -441,7 +441,7 @@ def predict():
         
         # Continue with prediction
         arr = np.expand_dims(tf.keras.preprocessing.image.img_to_array(img) / 255.0, axis=0)
-        pred = model.predict(arr, axis=1)[0]
+        pred = model.predict(arr, verbose=0)[0]
         idx = int(np.argmax(pred))
         conf = float(pred[idx])
 
