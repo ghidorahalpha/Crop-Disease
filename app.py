@@ -63,7 +63,7 @@ class DiseaseResponse(BaseModel):
     affected: float
 
 # === GEMINI SETUP ===
-os.environ['GOOGLE_API_KEY']=os.environ.get('GOOGLE_GEMINI_API_KEY','AIzaSyByvzjUjcmThrJKuqOQzWNW3bumxqG5UP0')
+os.environ['GOOGLE_API_KEY']=os.environ.get('GOOGLE_GEMINI_API_KEY','AIzaSyBW0Z5HmGy03dfkGX4K2ugNrVEFHvtNBxQ')
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1)
 parser = JsonOutputParser(pydantic_object=DiseaseResponse)  # Fixed: Use pydantic schema
 
